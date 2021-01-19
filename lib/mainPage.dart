@@ -5,31 +5,28 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Stack(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Align(
-            alignment: FractionalOffset.bottomCenter,
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height * 0.75,
-              decoration: BoxDecoration(
-                  border: Border.all(width: 2.0, color: Colors.black),
-                  color: Color(0xff6dede5),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40),
-                  )),
+          Container(
+            alignment: FractionalOffset.topCenter,
+            padding: EdgeInsets.all(10),
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height * 0.25,
+            decoration: BoxDecoration(
+              border: Border.all(width: 2.0, color: Colors.black),
+              color: Color(0xff6dede5),
+              borderRadius: BorderRadius.only(
+                bottomRight: Radius.circular(40),
+                bottomLeft: Radius.circular(40),
+              ),
             ),
-          ),
-          Positioned(
-            top: MediaQuery.of(context).size.height * 0.15,
-            right: 20,
-            left: 20,
-            child: Container(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  FlatButton(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: FlatButton(
                     onPressed: () {},
                     child: Icon(
                       Icons.person,
@@ -37,33 +34,98 @@ class MainPage extends StatelessWidget {
                       color: Colors.blue,
                     ),
                   ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.bookmark,
-                      size: 45,
-                      color: Colors.blue,
+                ),
+                Expanded(
+                  flex: 3,
+                  child: Container(
+                    margin: EdgeInsets.all(10),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Rendi Dwi",
+                          style: TextStyle(
+                              fontSize: 24, fontWeight: FontWeight.bold),
+                        ),
+                        Text(
+                          "Data Science",
+                          style: TextStyle(fontSize: 18),
+                        ),
+                      ],
                     ),
                   ),
-                  FlatButton(
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.settings,
-                      size: 45,
-                      color: Colors.blue,
-                    ),
-                  ),
-                ],
-              ),
-              width: MediaQuery.of(context).size.width * 0.85,
-              height: 100,
-              decoration: BoxDecoration(
-                border: Border.all(width: 2.0, color: Colors.black),
-                color: Color(0xffa6f5ef),
-                borderRadius: BorderRadius.all(Radius.circular(20)),
-              ),
+                ),
+              ],
             ),
           ),
+          Container(
+            margin: EdgeInsets.only(top: 10),
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Container(
+                  margin: EdgeInsets.all(20),
+                  width: MediaQuery.of(context).size.width * 0.90,
+                  height: MediaQuery.of(context).size.height * 0.15,
+                  decoration: BoxDecoration(
+                    border: Border.all(width: 2.0, color: Colors.black),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width * 0.30,
+                      height: MediaQuery.of(context).size.height * 0.15,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 2.0, color: Colors.black),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width * 0.30,
+                      height: MediaQuery.of(context).size.height * 0.15,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 2.0, color: Colors.black),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width * 0.30,
+                      height: MediaQuery.of(context).size.height * 0.15,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 2.0, color: Colors.black),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                    Container(
+                      margin: EdgeInsets.all(10),
+                      width: MediaQuery.of(context).size.width * 0.30,
+                      height: MediaQuery.of(context).size.height * 0.15,
+                      decoration: BoxDecoration(
+                        border: Border.all(width: 2.0, color: Colors.black),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          )
         ],
       ),
     );
