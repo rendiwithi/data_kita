@@ -1,3 +1,4 @@
+import 'package:data_kita/modul_widget/sponsor_widget.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatelessWidget {
@@ -17,7 +18,6 @@ class MainPage extends StatelessWidget {
               border: Border.all(width: 2.0, color: Colors.black),
               color: Color(0xff6dede5),
               borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(40),
                 bottomLeft: Radius.circular(40),
               ),
             ),
@@ -68,15 +68,7 @@ class MainPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Container(
-                  margin: EdgeInsets.all(20),
-                  width: MediaQuery.of(context).size.width * 0.90,
-                  height: MediaQuery.of(context).size.height * 0.15,
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 2.0, color: Colors.black),
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
+                buildCarousel(context),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
