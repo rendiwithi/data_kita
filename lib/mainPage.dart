@@ -1,10 +1,37 @@
 import 'package:data_kita/modul_widget/sponsor_widget.dart';
 import 'package:flutter/material.dart';
 
+final Color mainColor = Color(0xff6dede5);
+final Color sponsorColor = Color(0xFFcbf2f0);
+
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: mainColor,
+          child: Icon(
+            Icons.add,
+            color: Colors.black,
+          ),
+          onPressed: () {}),
+      bottomNavigationBar: BottomAppBar(
+          color: mainColor,
+          shape: CircularNotchedRectangle(),
+          child: Container(
+            height: MediaQuery.of(context).size.height * 0.09,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                IconButton(icon: Icon(Icons.home), onPressed: () {}),
+                IconButton(icon: Icon(Icons.person), onPressed: () {}),
+                SizedBox(width: 40), // The dummy child
+                IconButton(icon: Icon(Icons.notifications), onPressed: () {}),
+                IconButton(icon: Icon(Icons.message), onPressed: () {}),
+              ],
+            ),
+          )),
       backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
@@ -16,47 +43,26 @@ class MainPage extends StatelessWidget {
             height: MediaQuery.of(context).size.height * 0.25,
             decoration: BoxDecoration(
               border: Border.all(width: 2.0, color: Colors.black),
-              color: Color(0xff6dede5),
+              color: mainColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(40),
               ),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(
-                  flex: 1,
-                  child: FlatButton(
-                    onPressed: () {},
-                    child: Icon(
-                      Icons.person,
-                      size: 45,
-                      color: Colors.blue,
-                    ),
+            child: Container(
+              margin: EdgeInsets.all(10),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    "Data Kita",
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                ),
-                Expanded(
-                  flex: 3,
-                  child: Container(
-                    margin: EdgeInsets.all(10),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Rendi Dwi",
-                          style: TextStyle(
-                              fontSize: 24, fontWeight: FontWeight.bold),
-                        ),
-                        Text(
-                          "Data Science",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                      ],
-                    ),
+                  Text(
+                    "Change Life With Data",
+                    style: TextStyle(fontSize: 18),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           Container(
@@ -68,7 +74,7 @@ class MainPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                buildCarousel(context),
+                sponsorWidget(context, sponsorColor),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
