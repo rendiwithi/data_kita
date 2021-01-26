@@ -13,7 +13,7 @@ Widget sponsorWidget(BuildContext context, Color mainColor) {
           controller: PageController(viewportFraction: 0.7),
           itemBuilder: (BuildContext context, int itemIndex) {
             // boxColor = colorBox[itemIndex].toString();
-            return FlatButton(
+            return TextButton(
               onPressed: () {},
               child: Container(
                 child: Center(

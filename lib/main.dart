@@ -1,6 +1,6 @@
-import 'package:data_kita/test.dart';
+// import 'package:data_kita/test.dart';
 import 'package:flutter/material.dart';
-import 'mainPage.dart';
+import 'view/mainPage.dart';
 
 void main() => runApp(MyApp());
 
