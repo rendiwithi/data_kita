@@ -7,7 +7,7 @@ Widget sponsorWidget(BuildContext context, Color mainColor) {
     mainAxisSize: MainAxisSize.min,
     children: <Widget>[
       SizedBox(
-        height: MediaQuery.of(context).size.height * 0.25,
+        height: MediaQuery.of(context).size.height * 0.15,
         child: PageView.builder(
           itemCount: items.length,
           controller: PageController(viewportFraction: 0.7),

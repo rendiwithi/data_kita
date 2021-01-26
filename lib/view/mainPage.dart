@@ -14,8 +14,7 @@ class MainPage extends StatelessWidget {
       floatingActionButton: FloatingButtonWidget(),
       bottomNavigationBar: BottomAppBarWidget(),
       backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+      body: ListView(
         children: [
           IconTemplate(),
           Container(
@@ -25,21 +24,20 @@ class MainPage extends StatelessWidget {
               color: Colors.white,
             ),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 sponsorWidget(context, sponsorColor),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu(),
-                    IconMenu(),
+                    IconMenu('need AI'),
+                    IconMenu('need DI'),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu(),
-                    IconMenu(),
+                    IconMenu('need BI'),
+                    IconMenu('need ML'),
                   ],
                 ),
               ],
