@@ -1,4 +1,5 @@
 import 'package:data_kita/constants/colors_app.dart';
+import 'package:data_kita/view/test_view.dart';
 import 'package:data_kita/widgets/sponsor_widget.dart';
 import 'package:data_kita/widgets/bottom_app_bar.dart';
 import 'package:data_kita/widgets/floating_Button.dart';
@@ -29,15 +30,15 @@ class MainPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu('need AI'),
-                    IconMenu('need DI'),
+                    IconMenu('Share', TestView()),
+                    IconMenu('Collect', TestView()),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu('need BI'),
-                    IconMenu('need ML'),
+                    IconMenu('Delete', TestView()),
+                    IconMenu('Change', TestView()),
                   ],
                 ),
               ],

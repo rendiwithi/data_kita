@@ -21,7 +21,7 @@ Widget sponsorWidget(BuildContext context, Color mainColor) {
                     items[itemIndex].toString(),
                     // items.toString(),
                     style: TextStyle(
-                      fontSize: 36,
+                      fontSize: 28,
                     ),
                   ),
                 ),
