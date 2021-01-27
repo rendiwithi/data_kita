@@ -1,10 +1,10 @@
-import 'package:data_kita/view/test_view.dart';
 import 'package:flutter/material.dart';
 
 class IconMenu extends StatelessWidget {
   final String text;
-  final StatelessWidget page;
-  const IconMenu(this.text, this.page);
+  final Widget page;
+  final IconData icon;
+  const IconMenu(this.text, this.page, this.icon);
   @override
   Widget build(BuildContext context) {
 
@@ -15,10 +15,14 @@ class IconMenu extends StatelessWidget {
         }));
       },
       child: Container(
-        alignment: Alignment.center,
-        child: Text(
-          text,
-          style: TextStyle(fontSize: 28),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(icon, size: 36,),
+            Text(
+              text,
+            ),
+          ],
         ),
         margin: EdgeInsets.all(10),
         width: MediaQuery.of(context).size.width * 0.30,

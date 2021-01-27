@@ -10,7 +10,6 @@ class IconTemplate extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height * 0.25,
       decoration: BoxDecoration(
-        border: Border.all(width: 2.0, color: Colors.black),
         color: mainColor,
         borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(40),

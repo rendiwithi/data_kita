@@ -30,15 +30,15 @@ class MainPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu('Share', TestView()),
-                    IconMenu('Collect', TestView()),
+                    IconMenu('Share', TestView(), Icons.share),
+                    IconMenu('Collect', TestView(), Icons.add_chart),
                   ],
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu('Delete', TestView()),
-                    IconMenu('Change', TestView()),
+                    IconMenu('Delete', TestView(), Icons.delete),
+                    IconMenu('Change', TestView(), Icons.edit),
                   ],
                 ),
               ],
