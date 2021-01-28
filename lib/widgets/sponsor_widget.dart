@@ -1,3 +1,4 @@
+import 'package:data_kita/view/test_view.dart';
 import 'package:flutter/material.dart';
 
 final List items = ['Apple', 'DataKita', 'Microsoft', 'Binomo'];
@@ -14,7 +15,11 @@ Widget sponsorWidget(BuildContext context, Color mainColor) {
           itemBuilder: (BuildContext context, int itemIndex) {
             // boxColor = colorBox[itemIndex].toString();
             return TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) {
+                  return TestView();
+                }));
+              },
               child: Container(
                 child: Center(
                   child: Text(

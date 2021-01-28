@@ -1,4 +1,5 @@
 import 'package:data_kita/constants/colors_app.dart';
+import 'package:data_kita/view/share_view/share_view.dart';
 import 'package:data_kita/view/test_view.dart';
 import 'package:data_kita/widgets/sponsor_widget.dart';
 import 'package:data_kita/widgets/bottom_app_bar.dart';
@@ -12,7 +13,7 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingButtonWidget(),
+      floatingActionButton: FloatingButtonWidget(icon: Icons.add,),
       bottomNavigationBar: BottomAppBarWidget(),
       backgroundColor: Colors.white,
       body: ListView(
@@ -30,7 +31,7 @@ class MainPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    IconMenu('Share', TestView(), Icons.share),
+                    IconMenu('Share', ShareView(), Icons.share),
                     IconMenu('Collect', TestView(), Icons.add_chart),
                   ],
                 ),
